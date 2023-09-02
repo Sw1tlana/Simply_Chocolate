@@ -1,0 +1,122 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+:root {
+--c-primary: #111111;
+--c-bgc-light: #FAFAFA;
+--c-white: #FFFFFF;
+--c-alfalLight: #FFFFFF70;
+--c-btn-primary: #FD9222;
+--c-bgc-dark: #1E1823;
+
+
+}
+
+body {
+    color: var(--c-primary);
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--c-bgc-light);
+    font-size: 14px;
+}
+
+
+/* ------------------------Header--------------- */
+
+.logo {
+    color: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.03em;
+}
+
+.logo-style {
+    font-style: italic;
+}
+
+.img-header {}
+
+.nav-header {}
+
+.nav-header-list {}
+
+.nav-header-item {
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02;
+}
+
+.nav-header-link {
+    color: inherit;
+}
+
+.icons-header {}
+
+/*--------------------Main-------------- */
+
+   /* Section hero */
+
+.hero-title {
+
+    background-color: var(--c-primary);
+
+    color: var(--c-white);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.21;
+    letter-spacing: 0.03;
+    max-width: 484px;
+}
+
+.primery-button {
+    background-color: var(--c-btn-primary);
+    color: var(--c-white);
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 100px;
+}
+
+.secondary-button {
+    color: var(--c-white);
+    border-radius: 100px;
+    border: 1px solid var(--c-white);
+    font-weight: 600;
+    line-height: normal;
+    padding: 14px 40px;
+
+    background-color: var(--c-primary);
+}
+
+.scrol-down {
+    color: var(--c-white);
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: 0.03;
+
+    background-color: var(--c-primary);
+}
+
+.img-scrol {
+
+}
+
+ /* Section Our advantages */
+
