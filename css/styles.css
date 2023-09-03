@@ -23,7 +23,8 @@ ul {
 --c-alfalLight: #FFFFFF70;
 --c-btn-primary: #FD9222;
 --c-bgc-dark: #1E1823;
-
+--c-icons-light: #FFFFFF50;
+--c-primary-transparent: #11111110;
 
 }
 
@@ -33,6 +34,25 @@ body {
     background-color: var(--c-bgc-light);
     font-size: 14px;
 }
+
+/* -------General styles------------- */
+
+ .mini-color {
+    color: var(--c-btn-primary);
+ }
+
+  .sensations-tittle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.16;
+    letter-spacing: 0.03;
+    text-transform: uppercase;
+  }
+
+  .images {
+    max-width: 100%;
+  }
 
 
 /* ------------------------Header--------------- */
@@ -119,4 +139,127 @@ body {
 }
 
  /* Section Our advantages */
+
+ .visually-hidden {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     border: 0;
+     padding: 0;
+     white-space: nowrap;
+     clip-path: inset(100%);
+     clip: rect(0 0 0 0);
+     overflow: hidden;
+ }
+ .section-advantages {
+    background-color: var(--c-bgc-dark);
+ }
+
+ .advantages-list {}
+
+ .advantages-item {}
+
+ .icons-advantages {}
+
+ .subtittle-advantages {
+    color: var(--c-white);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+ }
+
+ .text-advantages {
+    color: var(--c-alfalLight);
+        line-height: normal;
+        letter-spacing: 0.02;
+ }
+
+ /* ----------Section sensations----------- */
+
+
+ .section-sensations {}
+
+ .text-sensations {
+    text-align: center;
+    line-height: 1.28;
+    letter-spacing: 0.01;
+ }
+
+ .images-sensations-chocolate {
+    border-radius: 15px;
+    background: var(--c-btn-primary);
+ }
+
+ .images-sensations-milk {
+    border-radius: 15px;
+    border: 1px solid var(--c-btn-primary);
+    background: var(--c-white);
+ }
+
+ .images-sensations-nuts {
+    border-radius: 15px;
+    background: var(--c-bgc-dark);
+ }
+
+ .images-sensations-semi {
+    border-radius: 15px;
+    border: 1px solid var(--c-btn-primary);
+    background: var(--c-white);
+ }
+
+
+/*----------Section How it's made ---------------Recipe---------- */
+
+ .section-recipe {}
+
+ .icons-recipe {}
+ 
+ .subtittle-recipe {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+ }
+
+ .recipe-list {}
+
+ .recipe-item {}
+
+ .subtext-recipe {
+    line-height: 1.28px;
+    letter-spacing: 0.02;
+ }
+
+
+ /* -----------Section Our products------------ */
+
+.section-products {}
+
+.products-list {}
+
+.product-item {}
+
+.subtittle-products {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.33;
+    letter-spacing: 0.02;
+    text-transform: uppercase;
+}
+
+.text-products {
+    color: var(--c-alfalLight);
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02;
+}
+
+.price-product-btn {
+    border-radius: 100px;
+    border: 1px solid var(--c-primary-transparent);
+    background-color: var(--c-bgc-light);
+    color: var(--c-primary);
+    font-weight: 600;
+    line-height: normal;
+}
 
