@@ -35,6 +35,17 @@ body {
     font-size: 14px;
 }
 
+h1,
+h2,
+h3, 
+h4, 
+h5, 
+h6, 
+p {
+    margin: 0;
+}
+
+
 /* -------General styles------------- */
 
  .mini-color {
@@ -54,6 +65,15 @@ body {
     max-width: 100%;
   }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.section {
+    padding: 64px 0;
+}
 
 /* ------------------------Header--------------- */
 
@@ -91,16 +111,20 @@ body {
 
    /* Section hero */
 
-.hero-title {
-
+   .hero-section {
+    padding: 380px 0;
     background-color: var(--c-primary);
+   }
 
+.hero-title {
     color: var(--c-white);
     font-size: 28px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.21;
     letter-spacing: 0.03;
+    max-width: 484px;
+    margin-bottom: 32px;
     max-width: 484px;
 }
 
@@ -121,8 +145,6 @@ body {
     font-weight: 600;
     line-height: normal;
     padding: 14px 40px;
-
-    background-color: var(--c-primary);
 }
 
 .scrol-down {
@@ -154,19 +176,28 @@ body {
  }
  .section-advantages {
     background-color: var(--c-bgc-dark);
+    padding-top: 50px;
+    padding-bottom: 50px;
  }
 
  .advantages-list {}
 
  .advantages-item {}
 
- .icons-advantages {}
+ .icons-advantages {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 1px solid var(--c-icons-light);
+    margin-bottom: 22px;
+ }
 
  .subtittle-advantages {
     color: var(--c-white);
     font-size: 18px;
     font-weight: 600;
     line-height: normal;
+    margin-bottom: 18px;
  }
 
  .text-advantages {
