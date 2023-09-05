@@ -13,7 +13,7 @@ a:active {
 ul {
     list-style-type: none;
     margin: 0;
-    padding-left: 0;
+    padding: 0;
 }
 
 :root {
@@ -105,7 +105,10 @@ p {
     color: inherit;
 }
 
-.icons-header {}
+.icons-header {
+    width: 24px;
+    height: 24px;
+}
 
 /*--------------------Main-------------- */
 
