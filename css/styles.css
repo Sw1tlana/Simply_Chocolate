@@ -77,7 +77,25 @@ p {
 
 /* ------------------------Header--------------- */
 
+.header {
+    padding-bottom: 8px;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header-socials {
+    display: flex;
+    gap: 18px;
+}
+
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     color: inherit;
     font-size: 18px;
     font-weight: 700;
@@ -91,17 +109,26 @@ p {
 
 .img-header {}
 
-.nav-header {}
+.nav-header {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 24px;
+}
 
-.nav-header-list {}
-
-.nav-header-item {
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02;
+.nav-header-list {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    gap: 24px;
 }
 
 .nav-header-link {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02;
+    padding: 24px 0;
     color: inherit;
 }
 
@@ -113,11 +140,21 @@ p {
 /*--------------------Main-------------- */
 
    /* Section hero */
+    .hero-section {
+         padding-bottom: 72px;
+}
 
-   .hero-section {
-    padding: 380px 0;
-    background-color: var(--c-primary);
-   }
+   .herro-inner {
+        border-radius: 30px;
+        background-color: var(--c-primary);
+        padding: 380px 40px 40px;
+}
+
+   .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
 
 .hero-title {
     color: var(--c-white);
@@ -150,13 +187,15 @@ p {
     padding: 14px 40px;
 }
 
-.scrol-down {
+.herro-scrol-down {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: auto;
     color: var(--c-white);
     font-weight: 500;
     line-height: 1.28;
     letter-spacing: 0.03;
-
-    background-color: var(--c-primary);
 }
 
 .img-scrol {
@@ -183,9 +222,15 @@ p {
     padding-bottom: 50px;
  }
 
- .advantages-list {}
+ .advantages-list {
+    display: flex;
+    gap: 72px;
+ }
 
- .advantages-item {}
+ .advantages-item:not(:last-child) {
+    padding-right: 18px;
+    border-right: 1px solid var(--c-alfalLight);
+ }
 
  .icons-advantages {
     width: 62px;
@@ -214,38 +259,85 @@ p {
 
  .section-sensations {}
 
+ .sensations-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+ }
+
+ .sensations-item {
+    flex-basis: calc((100% - 57px) / 4);
+ }
+
+ .sensations-tittle {
+    margin-bottom: 28px;
+    max-width: 411px;
+ }
+
  .text-sensations {
     text-align: center;
     line-height: 1.28;
     letter-spacing: 0.01;
+    margin-bottom: 50px;
  }
 
- .images-sensations-chocolate {
+ .ingridient-sensations-chocolate {
     border-radius: 15px;
     background: var(--c-btn-primary);
+    color: var(--c-white);
+    padding: 20px;
  }
 
- .images-sensations-milk {
+ .ingridient-sensations-milk {
     border-radius: 15px;
     border: 1px solid var(--c-btn-primary);
     background: var(--c-white);
+    padding: 20px;
  }
 
- .images-sensations-nuts {
+ .ingridient-sensations-nuts {
     border-radius: 15px;
     background: var(--c-bgc-dark);
+    color: var(--c-white);
+    padding: 20px;
  }
 
- .images-sensations-semi {
+ .ingridient-sensations-semi {
     border-radius: 15px;
     border: 1px solid var(--c-btn-primary);
     background: var(--c-white);
+    padding: 20px;
+ }
+
+ .images-sensations {
+    /* min-width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover; */
  }
 
 
 /*----------Section How it's made ---------------Recipe---------- */
 
- .section-recipe {}
+ .video-inner {
+    display: flex;
+    gap: 20px;
+ }
+
+ .video-content {
+    padding: 32px;
+    flex-basis: calc((100 - 20px /2));
+ }
+
+ .video-media {
+    flex-basis: calc((100 - 20px /2));
+ }
+
+ .images-background {
+    border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
+ }
 
  .icons-recipe {}
  
@@ -255,9 +347,6 @@ p {
     line-height: 1.33;
  }
 
- .recipe-list {}
-
- .recipe-item {}
 
  .subtext-recipe {
     line-height: 1.28px;
