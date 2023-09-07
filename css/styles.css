@@ -15,6 +15,21 @@ ul {
     margin: 0;
     padding: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 :root {
 --c-primary: #111111;
@@ -35,16 +50,6 @@ body {
     font-size: 14px;
 }
 
-h1,
-h2,
-h3, 
-h4, 
-h5, 
-h6, 
-p {
-    margin: 0;
-}
-
 
 /* -------General styles------------- */
 
@@ -57,12 +62,8 @@ p {
     font-size: 24px;
     font-weight: 600;
     line-height: 1.16;
-    letter-spacing: 0.03;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
-  }
-
-  .images {
-    max-width: 100%;
   }
 
 .container {
@@ -198,10 +199,6 @@ p {
     letter-spacing: 0.03;
 }
 
-.img-scrol {
-
-}
-
  /* Section Our advantages */
 
  .visually-hidden {
@@ -227,19 +224,19 @@ p {
     gap: 72px;
  }
 
+ .advantages-item {
+    margin-bottom: 22px;
+ }
+
  .advantages-item:not(:last-child) {
     padding-right: 18px;
     border-right: 1px solid var(--c-alfalLight);
  }
 
- .icons-advantages {
-    width: 62px;
-    height: 62px;
+ .advantages-icons {
     border-radius: 50%;
     border: 1px solid var(--c-icons-light);
-    margin-bottom: 22px;
  }
-
  .subtittle-advantages {
     color: var(--c-white);
     font-size: 18px;
@@ -257,21 +254,20 @@ p {
  /* ----------Section sensations----------- */
 
 
- .section-sensations {}
+ /* .section-sensations {} */
 
  .sensations-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 19px;
+    gap: 20px;
  }
 
  .sensations-item {
-    flex-basis: calc((100% - 57px) / 4);
+    flex-basis: calc((100% - 60px) / 4);
  }
 
  .sensations-tittle {
     margin-bottom: 28px;
-    max-width: 411px;
  }
 
  .text-sensations {
@@ -279,42 +275,32 @@ p {
     line-height: 1.28;
     letter-spacing: 0.01;
     margin-bottom: 50px;
+    max-width: 486px;
+      text-align: center;
  }
+  
+.ingridient {
+    padding: 20px;
+}
 
- .ingridient-sensations-chocolate {
+ .sensations-item:first-child {
     border-radius: 15px;
     background: var(--c-btn-primary);
     color: var(--c-white);
-    padding: 20px;
  }
 
- .ingridient-sensations-milk {
-    border-radius: 15px;
+ .sensations-item:nth-child(even) {
     border: 1px solid var(--c-btn-primary);
+    border-radius: 15px;
     background: var(--c-white);
-    padding: 20px;
+    color: var(--c-primary);
  }
 
- .ingridient-sensations-nuts {
+ .sensations-item:nth-child(3) {
     border-radius: 15px;
     background: var(--c-bgc-dark);
     color: var(--c-white);
-    padding: 20px;
- }
-
- .ingridient-sensations-semi {
-    border-radius: 15px;
-    border: 1px solid var(--c-btn-primary);
-    background: var(--c-white);
-    padding: 20px;
- }
-
- .images-sensations {
-    /* min-width: 100%;
-    display: block;
-    height: auto;
-    object-fit: cover; */
- }
+}
 
 
 /*----------Section How it's made ---------------Recipe---------- */
@@ -339,7 +325,7 @@ p {
     object-fit: cover;
  }
 
- .icons-recipe {}
+ /* .icons-recipe {} */
  
  .subtittle-recipe {
     font-size: 18px;
