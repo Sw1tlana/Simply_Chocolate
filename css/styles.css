@@ -108,8 +108,6 @@ body {
     font-style: italic;
 }
 
-.img-header {}
-
 .nav-header {
     display: flex;
     align-items: center;
@@ -271,12 +269,11 @@ body {
  }
 
  .text-sensations {
-    text-align: center;
     line-height: 1.28;
     letter-spacing: 0.01;
     margin-bottom: 50px;
     max-width: 486px;
-      text-align: center;
+    text-align: center;
  }
   
 .ingridient {
