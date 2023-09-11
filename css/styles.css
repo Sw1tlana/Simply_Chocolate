@@ -58,7 +58,6 @@ body {
  }
 
   .sensations-tittle {
-    text-align: center;
     font-size: 24px;
     font-weight: 600;
     line-height: 1.16;
@@ -164,7 +163,6 @@ body {
     letter-spacing: 0.03;
     max-width: 484px;
     margin-bottom: 32px;
-    max-width: 484px;
 }
 
 .primery-button {
@@ -254,27 +252,35 @@ body {
 
  /* .section-sensations {} */
 
- .sensations-list {
+ .container-sensations {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
  }
 
- .sensations-item {
-    flex-basis: calc((100% - 60px) / 4);
- }
+  .sensations-tittle {
+      margin-bottom: 28px;
+      width: 40%;
+      text-align: center;
+  }
 
- .sensations-tittle {
-    margin-bottom: 28px;
- }
+  .text-sensations {
+      line-height: 1.28;
+      letter-spacing: 0.01;
+      margin-bottom: 50px;
+      max-width: 486px;
+      text-align: center;
+  }
 
- .text-sensations {
-    line-height: 1.28;
-    letter-spacing: 0.01;
-    margin-bottom: 50px;
-    max-width: 486px;
-    text-align: center;
- }
+  .sensations-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+  }
+
+  .sensations-item {
+      flex-basis: calc((100% - 60px) / 4);
+  }
   
 .ingridient {
     padding: 20px;
@@ -307,6 +313,11 @@ body {
     gap: 20px;
  }
 
+ .tittle-video {
+    text-align: center;
+    margin-bottom: 50px;
+ }
+
  .video-content {
     padding: 32px;
     flex-basis: calc((100 - 20px /2));
@@ -328,6 +339,8 @@ body {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.33;
+    margin-bottom: 28px;
+    max-width: 350px;
  }
 
 
@@ -335,6 +348,11 @@ body {
     line-height: 1.28px;
     letter-spacing: 0.02;
  }
+
+  .subtext-recipe-item:not(:last-child), 
+   .subtext-recipe-item:not(:first-child){
+     margin-bottom: 24px;
+  }
 
 
  /* -----------Section Our products------------ */
