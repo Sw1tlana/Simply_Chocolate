@@ -53,12 +53,12 @@
           </nav>
 
           <div class="header-socials">
-            <a class="nav-header-link" href="#" target="_blank">
-              <svg width="24" height="'24">
+            <a class="header-link-social" href="#" target="_blank">
+              <svg width="24" height="24">
                 <use href="./images/icons.svg#icon-instagram"></use>
               </svg>
             </a>
-            <a class="nav-header-link" href="#" target="_blank">
+            <a class="header-link-social" href="#" target="_blank">
               <svg width="24" height="24">
                 <use href="./images/icons.svg#icon-twitter"></use>
               </svg>
@@ -83,10 +83,14 @@
             <div class="hero-actions">
               <button class="primery-button" type="button">Buy now</button>
               <a class="secondary-button" href="#">Buy now</a>
-              <a class="herro-scrol-down" href="#">scroll down</a>
-              <svg width="22">
-                <use href="./images/icons.svg#icon-arrow"></use>
-              </svg>
+              <a class="hero-arrow" href="#section-advantages"
+                >scroll down
+                <div class="hero-arrow-link">
+                  <svg width="22" height="22">
+                    <use href="./images/icons.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -94,15 +98,17 @@
 
       <!-- Section Our advantages -->
 
-      <section class="section section-advantages">
+      <section id="section-advantages" class="section section-advantages">
         <div class="container">
           <h2 class="visually-hidden">Our advantages</h2>
           <ul class="advantages-list">
             <li class="advantages-item">
-              <svg width="32">
-                <use href="./images/icons.svg#icon-taste-chocolate"></use>
-              </svg>
-              <h3 class="subtittle-advantages">Unsurpassed taste</h3>
+              <div class="advantages-icon">
+                <svg width="32" height="32">
+                  <use href="./images/icons.svg#icon-taste-chocolate"></use>
+                </svg>
+              </div>
+              <h3 class="subtitle-advantages">Unsurpassed taste</h3>
               <p class="text-advantages">
                 Crafted with the finest quality cocoa beans and a dedication to
                 perfection, each bite is a decadent experience that simply
@@ -111,10 +117,12 @@
               </p>
             </li>
             <li class="advantages-item">
-              <svg width="32">
-                <use href="./images/icons.svg#icon-coin"></use>
-              </svg>
-              <h3 class="subtittle-advantages">Affordable price</h3>
+              <div class="advantages-icon">
+                <svg width="32" height="32">
+                  <use href="./images/icons.svg#icon-coin"></use>
+                </svg>
+              </div>
+              <h3 class="subtitle-advantages">Affordable price</h3>
               <p class="text-advantages">
                 Indulge in high-quality chocolate without breaking the bank with
                 Simply Chocolate's selection of affordable treats. Enjoy
@@ -124,10 +132,12 @@
               </p>
             </li>
             <li class="advantages-item">
-              <svg width="32">
-                <use href="./images/icons.svg#icon-own-production"></use>
-              </svg>
-              <h3 class="subtittle-advantages">Own production</h3>
+              <div class="advantages-icon">
+                <svg width="32" height="32">
+                  <use href="./images/icons.svg#icon-own-production"></use>
+                </svg>
+              </div>
+              <h3 class="subtitle-advantages">Own production</h3>
               <p class="text-advantages">
                 We take pride in our own production process, ensuring that every
                 step is carefully crafted to perfection. From selecting the
@@ -144,7 +154,7 @@
       <section class="section">
         <div class="container">
           <div class="container-sensations">
-            <h2 class="section-tittle sensations-tittle">
+            <h2 class="section-title sensations-title">
               It all adds up to one exceptional
               <span class="mini-color">taste</span> sensation
             </h2>
@@ -164,7 +174,7 @@
                   alt="milk chocolate"
                   width="270"
                 />
-                <h3 class="subtittle-sections">Milk chocolate</h3>
+                <h3 class="subtitle-sections">Milk chocolate</h3>
               </div>
             </li>
             <li class="sensations-item">
@@ -197,7 +207,7 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section-tittle tittle-video">
+          <h2 class="section-title">
             How it's <span class="mini-color">made?</span>
           </h2>
           <div class="video-inner">
@@ -213,7 +223,7 @@
               />
             </div>
             <div class="video-content">
-              <p class="subtittle-recipe">
+              <p class="subtitle-recipe">
                 Try our chocolates today and discover the perfect balance of
                 flavor
               </p>
@@ -245,55 +255,99 @@
 
       <!-- Section Our products -->
 
-      <section class="section section-products">
+      <section class="section">
         <div class="container">
-          <h2 class="section-tittle">
+          <h2 class="section-title">
             Our <span class="mini-color">products</span>
           </h2>
-          <ul class="products-list">
+          <ul class="product-list">
             <li class="product-item">
-              <img
-                class="images"
-                src="./images/orange.jpg"
-                alt="bar of chocolate orance"
-                width="230"
-              />
-              <h3 class="subtittle-products">Orange</h3>
-              <p class="text-products">Dark chocolate</p>
-              <button class="price-product-btn" type="button">45 UAH</button>
+              <article class="product">
+                <div class="product-images">
+                  <img
+                    class="product-photo"
+                    src="./images/orange.jpg"
+                    alt="bar of chocolate orance"
+                    width="230"
+                  />
+                  <div class="product-overley">
+                    <p>
+                      Finally, yes, chocolate is considered a functional food,
+                      as the cocoa in chocolate contains flavonoids, which boost
+                      endorphin and serotonin levels.
+                    </p>
+                  </div>
+                </div>
+                <h3 class="subtitle-product">Orange</h3>
+                <p class="text-products">Dark chocolate</p>
+                <button class="price-product-btn" type="button">45 UAH</button>
+              </article>
             </li>
             <li class="product-item">
-              <img
-                class="images"
-                src="./images/applecranberry.jpg"
-                alt="bar of chocolate pple&cranberry"
-                width="230"
-              />
-              <h3 class="subtittle-products">APPLE&amp;CRANBERRY</h3>
-              <p class="text-products">Milk chocolate</p>
-              <button class="price-product-btn" type="button">50 UAH</button>
+              <article class="product">
+                <div class="product-images">
+                  <img
+                    class="images"
+                    src="./images/applecranberry.jpg"
+                    alt="bar of chocolate pple&cranberry"
+                    width="230"
+                  />
+                  <div class="product-overley">
+                    <p>
+                      Finally, yes, chocolate is considered a functional food,
+                      as the cocoa in chocolate contains flavonoids, which boost
+                      endorphin and serotonin levels.
+                    </p>
+                  </div>
+                </div>
+                <h3 class="subtitle-product">APPLE&amp;CRANBERRY</h3>
+                <p class="text-products">Milk chocolate</p>
+                <button class="price-product-btn" type="button">50 UAH</button>
+              </article>
             </li>
             <li class="product-item">
-              <img
-                class="images"
-                src="./images/limeseasalt.jpg"
-                alt="bar of chocolate images/lime&sea salt"
-                width="230"
-              />
-              <h3 class="subtittle-products">Lime&amp;sea salt</h3>
-              <p class="text-products">Dark chocolate</p>
-              <button class="price-product-btn" type="button">66 UAH</button>
+              <article class="product">
+                <div class="product-images">
+                  <img
+                    class="images"
+                    src="./images/limeseasalt.jpg"
+                    alt="bar of chocolate images/lime&sea salt"
+                    width="230"
+                  />
+                  <div class="product-overley">
+                    <p>
+                      Finally, yes, chocolate is considered a functional food,
+                      as the cocoa in chocolate contains flavonoids, which boost
+                      endorphin and serotonin levels.
+                    </p>
+                  </div>
+                </div>
+                <h3 class="subtitle-product">Lime&amp;sea salt</h3>
+                <p class="text-products">Dark chocolate</p>
+                <button class="price-product-btn" type="button">66 UAH</button>
+              </article>
             </li>
             <li class="product-item">
-              <img
-                class="images"
-                src="./images/pineapple.jpg"
-                alt="bar of chocolate pineapple"
-                width="230"
-              />
-              <h3 class="subtittle-products">Pineapple</h3>
-              <p class="text-products">Dark chocolate</p>
-              <button class="price-product-btn" type="button">54 UAH</button>
+              <article class="product">
+                <div class="product-images">
+                  <img
+                    class="images"
+                    src="./images/pineapple.jpg"
+                    alt="bar of chocolate pineapple"
+                    width="230"
+                  />
+                  <div class="product-overley">
+                    <p>
+                      Finally, yes, chocolate is considered a functional food,
+                      as the cocoa in chocolate contains flavonoids, which boost
+                      endorphin and serotonin levels.
+                    </p>
+                  </div>
+                </div>
+                <h3 class="subtitle-product">Pineapple</h3>
+                <p class="text-products">Dark chocolate</p>
+                <button class="price-product-btn" type="button">54 UAH</button>
+              </article>
             </li>
           </ul>
         </div>
