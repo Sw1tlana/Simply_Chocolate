@@ -37,6 +37,16 @@ img {
     height: auto;
 }
 
+textarea {
+    resize: none;
+}
+
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
 :root {
 --c-primary: #111111;
 --c-bgc-light: #FAFAFA;
@@ -535,4 +545,44 @@ body {
     font-size: 14px;
     line-height: 1.28;
     letter-spacing: 0.02;
+}
+
+/* Modal */
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    position: relative;
+    width: 610px;
+    background-color: var(--c-white);
+    border-radius: 15px;
+    padding: 48px;
+    transform: scale(1);
+    transition: 250ms ease-in-out;
+}
+
+.backdrop.is-hidden .modal {
+    transform: scale(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
 }
