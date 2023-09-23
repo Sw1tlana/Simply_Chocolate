@@ -421,9 +421,13 @@
 
     <!-- Modal -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button class="modal-close" type="button" data-modal-close>X</button>
+        <button class="modal-close" type="button" data-modal-close>
+          <svg class="modal-close-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-x-close"></use>
+          </svg>
+        </button>
         <h2 class="section-title"><span class="mini-color">Buy</span> now</h2>
         <form
           class="contact-form"
@@ -431,30 +435,38 @@
           method="POST"
         >
           <fieldset>
-            <legend>Personal information</legend>
-            <div>
-              <label class="visually-hidden" for="user-name">Name</label>
-              <input
-                type="text"
-                id="user-name"
-                name="user-name"
-                placeholder="Name"
-              />
+            <legend class="modal-form-text">Personal information</legend>
+
+            <div class="container-person">
+              <div>
+                <label class="visually-hidden" for="user-name">Name</label>
+                <input
+                  class="modal-person-input"
+                  type="text"
+                  id="user-name"
+                  name="user-name"
+                  placeholder="Name"
+                />
+              </div>
+
+              <div>
+                <label class="visually-hidden" for="user-surname"
+                  >Surname</label
+                >
+                <input
+                  class="modal-person-input"
+                  type="text"
+                  id="user-surname"
+                  name="user-surname"
+                  placeholder="Surname"
+                />
+              </div>
             </div>
 
             <div>
-              <label class="visually-hidden" for="user-surname">Surname</label>
+              <label class="modal-form-text" for="user-email">Email</label>
               <input
-                type="text"
-                id="user-surname"
-                name="user-surname"
-                placeholder="Surname"
-              />
-            </div>
-
-            <div>
-              <label for="user-email">Email</label>
-              <input
+                class="modal-person-input"
                 type="email"
                 id="user-email"
                 name="user-email"
@@ -463,19 +475,28 @@
             </div>
 
             <div>
-              <label for="user-tel">Phone number</label>
-              <input
-                type="tel"
-                id="user-tel"
-                name="user-tel"
-                placeholder="Phone number"
-              />
+              <label class="modal-form-text" for="user-tel">Phone number</label>
+              <div class="modal-person-ukraine">
+                <input
+                  class="modal-person-input person-input"
+                  type="tel"
+                  id="user-tel"
+                  name="user-tel"
+                  placeholder="Phone number"
+                />
+                <svg class="modal-person-icon" width="28" height="28">
+                  <use href="./images/icons.svg#icon-ukraine"></use>
+                </svg>
+              </div>
             </div>
 
             <div>
-              <label for="user-card-number">Card number</label>
+              <label class="modal-form-text" for="user-card-number"
+                >Card number</label
+              >
               <input
-                type="number"
+                class="modal-person-input"
+                type="tel"
                 id="user-card-number"
                 name="user-card-number"
                 placeholder="Enter card"
@@ -486,8 +507,9 @@
           <fieldset>
             <legend class="visually-hidden">Addition information</legend>
             <div>
-              <label for="user-comment">Comment</label>
+              <label class="modal-form-text" for="user-comment">Comment</label>
               <textarea
+                class="modal-person-input input-textarea"
                 name="user-comment"
                 id="user-comment"
                 placeholder="Enter text"
@@ -495,7 +517,7 @@
             </div>
           </fieldset>
 
-          <button type="button">Submit</button>
+          <button class="primery-button" type="button">Submit</button>
         </form>
       </div>
     </div>

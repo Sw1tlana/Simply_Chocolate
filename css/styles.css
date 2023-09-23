@@ -47,6 +47,15 @@ fieldset {
     margin: 0;
 }
 
+input {
+    font-family: inherit;
+}
+
+button {
+    font-family: inherit;
+    color: currentColor;
+}
+
 :root {
 --c-primary: #111111;
 --c-bgc-light: #FAFAFA;
@@ -56,7 +65,7 @@ fieldset {
 --c-bgc-dark: #1E1823;
 --c-icons-light: #FFFFFF50;
 --c-primary-transparent: #11111110;
-
+--c-black: #000000;
 }
 
 body {
@@ -569,20 +578,89 @@ body {
 
 .modal {
     position: relative;
-    width: 610px;
-    background-color: var(--c-white);
+    min-width: 610px;
+    max-height: 1058px;
+    background-color: var(--c-bgc-light);
     border-radius: 15px;
     padding: 48px;
     transform: scale(1);
     transition: 250ms ease-in-out;
-}
-
-.backdrop.is-hidden .modal {
-    transform: scale(0);
+    overflow: auto;
 }
 
 .modal-close {
     position: absolute;
     top: 24px;
     right: 24px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: var(--c-bgc-light);
+}
+
+.modal-close-icon {
+    stroke: var(--c-primary);
+}
+
+.backdrop.is-hidden .modal {
+    transform: scale(0);
+}
+ 
+/* Person */
+.modal-form-text {
+    color: var(--c-black);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.28;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+
+.container-person {
+    display: flex;
+    gap: 21px;
+}
+
+.modal-person-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 22px 24px;
+    outline: transparent;
+    border-radius: 13px;
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.03);
+    margin-bottom: 18px;
+}
+
+.modal-person-input::placeholder {
+    color: rgba(64, 64, 64, 0.30);
+    font-size: 18px;
+}
+
+.modal-person-ukraine {
+    position: relative;
+}
+
+.modal-person-icon {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    transform: translateY(-50%); 
+    margin-right: 18px;   
+}
+
+.person-input::placeholder {
+    text-align: center;
+}
+
+.input-textarea {
+    min-width: 138px;
 }
