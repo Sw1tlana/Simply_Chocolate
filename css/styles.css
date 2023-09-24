@@ -401,6 +401,76 @@ body {
     color: var(--c-white);
 }
 
+/* Sensations overley */
+
+.ingridient {
+    position: relative;
+    overflow: hidden;
+}
+
+.sensations-overley {
+    position: absolute;
+    border-radius: 15px;
+    background-color: var(--c-white);
+    overflow: auto;
+    padding: 20px;
+    inset: 0;
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out;
+    }
+    
+.sensations:hover .sensations-overley {
+    transform: translateY(0);
+ }
+
+.sensations-overley-title {
+    color: var(--c-primary);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.container-overley-btn {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 14px;
+}
+
+.sensations-overley-btn {
+    border-radius: 35px;
+    background-color: var(--c-btn-primary);
+    border: none;
+    color: var(--c-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-size: 10px;
+    line-height: 1.2;
+    padding: 6px 16px;
+}
+
+.sensations-overley-link {
+    border-radius: 35px;
+    border: 1px solid var(--c-btn-primary);
+    background: var(--c-bgc-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 16px;
+    color: var(--c-primary);
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+.sensations-overley-text {
+    color: var(--c-primary);
+    line-height: 1.28;
+    text-align:justify;
+}
+
 
 /*----------Section How it's made ---------------Recipe---------- */
 
