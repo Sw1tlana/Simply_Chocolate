@@ -95,9 +95,11 @@ body {
   }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 32px;
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .section {
@@ -132,11 +134,27 @@ body {
     font-weight: 700;
     line-height: 1.11;
     letter-spacing: 0.03em;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .logo-style {
     font-style: italic;
 }
+
+.menu-button-mobile {
+    min-height: 28px;
+    min-width: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: auto;
+} 
 
 .nav-header {
     display: flex;
@@ -185,13 +203,50 @@ body {
 }
 
    .herro-inner {
+    max-width: 375px;
     border-radius: 30px;
     background-color: var(--c-primary);
-    padding: 380px 40px 40px;
-    background-image: url(../images/hero-bg.jpg);
+    /* padding: 380px 40px 40px; */
+    padding: 395px 20px 27px;
+    background-image: url(../images/hero-bg_mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin: 0 auto;
+}
+
+@media screen and (min-resolution: 192dpi) {
+    .herro-inner {
+        background-image: url(../images/hero-bg_mob@2x.jpg);
+    }
+}
+
+ @media screen and (min-width: 768px) {
+     .herro-inner {
+         max-width: 768px;
+         padding: 670px 40px 40px;
+         background-image: url(../images/hero-bg_tab.jpg);
+     }
+ }
+
+ @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+     .herro-inner {
+         background-image: url(../images/hero-bg_tab@2x.jpg);
+     }
+
+@media screen and (min-width: 1200px) {
+    .herro-inner {
+        max-width: 1200px;
+        padding: 380px 40px 40px;
+        background-image: url(../images/hero-bg_desk.jpg);
+    }
+}
+
+@media screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+     .herro-inner {
+        background-image: url(../images/hero-bg_desk@2x.jpg);
+     }
+}
 }
 
    .hero-actions {
@@ -807,4 +862,127 @@ body {
     background-color: var(--c-bg-ocean);
     border: none;
     fill: var(--c-white);
+}
+
+/* --------Mobal menu----------- */
+
+.mobal-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 136px 46px 20px;
+    background-color: var(--c-bgc-dark);
+    transform: translateX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.mobal-menu  .is-hidden {
+    transform: translateX(100%);
+}
+
+.mobal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    min-height: 28px;
+    min-width: 28px;
+    border: none;
+    background-color: var(--c-bgc-dark);
+}
+
+.mobal-close-icon {
+    fill: transparent;
+    stroke: var(--c-white);
+}
+
+.mobal-list {
+    margin-bottom: auto;
+}
+
+.mobal-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.mobal-link {
+    color: var(--c-white);
+}
+
+.mobal-socials-list {
+    display: flex;
+    gap: 18px;    
+}
+
+.header-link-social {
+    stroke: var(--c-white);
+}
+
+/*============== Media================= */
+
+@media screen and (max-width: 767.98px) {
+    .nav-header-list,
+    .header-socials {
+        display: none;
+    }
+}
+
+/* Tablet screen */
+@media screen and (min-width: 768px) {
+    .container {
+    max-width: 768px;
+}
+
+/* Header */
+.nav-header-list,
+.header-socials {
+    display: none;
+}
+
+.mobal-menu {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 290px;
+    width: 100%;
+    max-height: 1024px;
+    height: 100%;
+    padding: 156 84px 24px;
+}
+
+.mobal-link.active {
+    color: var(--c-btn-primary);
+    
+}
+
+}
+
+/* Desctop screen */
+@media screen and (min-width: 1200px){
+.container {
+     max-width: 1200px;
+ }
+
+ /* Header */
+.nav-header-list,
+.header-socials {
+    display: flex;
+}
+
+.menu-button-mobile {
+    display: none;
+}
+.header-link-social {
+    fill: none;
+    stroke: var(--c-primary);
+    transition: 0.5s ease-in-out;
+}
+
+.header-link-social:hover {
+    stroke: var(--c-btn-primary);
+}
+  
 }
