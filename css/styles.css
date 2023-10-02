@@ -215,81 +215,58 @@ body {
     margin: 0 auto;
 }
 
-@media screen and (min-resolution: 192dpi) {
-    .herro-inner {
-        background-image: url(../images/hero-bg_mob@2x.jpg);
-    }
-}
-
- @media screen and (min-width: 768px) {
-     .herro-inner {
-         max-width: 768px;
-         padding: 670px 40px 40px;
-         background-image: url(../images/hero-bg_tab.jpg);
-     }
- }
-
- @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
-     .herro-inner {
-         background-image: url(../images/hero-bg_tab@2x.jpg);
-     }
-
-@media screen and (min-width: 1200px) {
-    .herro-inner {
-        max-width: 1200px;
-        padding: 380px 40px 40px;
-        background-image: url(../images/hero-bg_desk.jpg);
-    }
-}
-
-@media screen and (min-width: 1200px) and (min-resolution: 192dpi) {
-     .herro-inner {
-        background-image: url(../images/hero-bg_desk@2x.jpg);
-     }
-}
-}
-
-   .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
 .hero-title {
     color: var(--c-white);
-    font-size: 28px;
+    /* font-size: 28px; */
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.21;
     letter-spacing: 0.03;
-    max-width: 484px;
+    max-width: 295px;
     margin-bottom: 32px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.container-actions {
+    display: flex;
+    gap: 8px;
 }
 
 .primery-button {
     background-color: var(--c-btn-primary);
     color: var(--c-white);
     font-weight: 600;
-    line-height: normal;
     border: none;
-    padding: 14px 40px;
+    padding: 12px 28px;
     border-radius: 100px;
+    max-width: 100%;
+    flex-shrink: 0;
 }
 
 .secondary-button {
+    max-width: 100%;
     color: var(--c-white);
     border-radius: 100px;
     border: 1px solid var(--c-white);
     font-weight: 600;
     line-height: normal;
-    padding: 14px 40px;
+    margin-right: 16px;
+    padding: 12px 28px;
+    flex-shrink: 0;
 }
 
 .hero-arrow {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-left: auto;
+    margin-right: auto;
     color: var(--c-white);
     font-weight: 500;
     line-height: 1.28;
@@ -329,6 +306,57 @@ body {
          transform: translateY(0);
      }
  }
+
+@media screen and (min-resolution: 192dpi) {
+    .herro-inner {
+        background-image: url(../images/hero-bg_mob@2x.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .herro-inner {
+        max-width: 768px;
+        padding: 670px 40px 40px;
+        background-image: url(../images/hero-bg_tab.jpg);
+    }
+
+    .hero-title {
+        max-width: 484px;
+        font-size: 28px;
+    }
+
+    .primery-button {
+       padding: 14px 40px;
+    }
+    .secondary-button {
+        padding: 14px 40px;
+    }
+
+    .hero-arrow {
+     margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .herro-inner {
+        background-image: url(../images/hero-bg_tab@2x.jpg);
+    }
+
+    @media screen and (min-width: 1200px) {
+        .herro-inner {
+            max-width: 1200px;
+            padding: 380px 40px 40px;
+            background-image: url(../images/hero-bg_desk.jpg);
+        }
+    }
+
+    @media screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+        .herro-inner {
+            background-image: url(../images/hero-bg_desk@2x.jpg);
+        }
+    }
+}
+
 
  /* Section Our advantages */
 
