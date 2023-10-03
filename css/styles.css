@@ -334,7 +334,7 @@ body {
 
     .hero-arrow {
      margin-left: auto;
-    }
+    } 
 }
 
 @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
@@ -427,10 +427,10 @@ body {
         letter-spacing: 0.02;
  }
 
- /* ----------Section sensations----------- */
+ /* ----------Section ingridient----------- */
 
 
- /* .section-sensations {} */
+ /* ingridient */
 
  .container-sensations {
     display: flex;
@@ -440,7 +440,8 @@ body {
 
   .sensations-title {
       margin-bottom: 28px;
-      width: 40%;
+      max-width: 283px;
+      /* width: 40%; */
   }
 
   .text-sensations {
@@ -458,8 +459,13 @@ body {
   }
 
   .sensations-item {
-      flex-basis: calc((100% - 60px) / 4);
+      flex-basis: calc((100% - 60px) / 4); 
   }
+
+.ingridient-img {
+    min-width: 224px;
+    min-height: 171px;
+}
   
 .ingridient {
     padding: 20px;
@@ -484,7 +490,7 @@ body {
     color: var(--c-white);
 }
 
-/* Sensations overley */
+/* ingridient overley */
 
 .ingridient {
     position: relative;
@@ -1011,6 +1017,13 @@ body {
 
 .header-link-social:hover {
     stroke: var(--c-btn-primary);
+}
+
+/* ingridient */
+
+.ingridient-img {
+  max-width: 206px;
+  min-height: 160px;
 }
   
 }
