@@ -103,7 +103,7 @@ body {
 }
 
 .section {
-    padding: 64px 0;
+    margin-bottom: 72px;
 }
 
 /* ------------------------Header--------------- */
@@ -199,7 +199,7 @@ body {
 
    /* Section hero */
     .hero-section {
-    padding-bottom: 72px;
+    margin-bottom: 70px;
 }
 
    .herro-inner {
@@ -374,11 +374,8 @@ body {
  }
  .section-advantages {
     background-color: var(--c-bgc-dark);
-    /* padding-top: 50px;
-    padding-bottom: 50px; */
     padding-top: 20px;
     padding-bottom: 20px;
-    
  }
 
  .advantages-list {
@@ -500,6 +497,10 @@ body {
 }
 
 /* ingridient overley */
+
+.section-ingridient {
+    margin-bottom: 72px;
+}
 
 .ingridient {
     position: relative;
@@ -690,17 +691,54 @@ body {
 
 /* ---------Section sellers-------- */
 
+.sellers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.sellers-item {
+    flex-basis: calc((100% - 32px) / 3);
+}
+
+.sellers-img {
+   
+}
+
+.sallers-text {
+    line-height: 1.28;
+    max-width: 408px;
+}
+
+.container-sellers {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
 
 /* ------Section reviews--------- */
 
+.title-review {
+    margin-bottom: 70px;
+}
+
 .reviews-list {
     display: flex;
-    gap: 28px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 28px; */
 }
 
 .reviews-item {
     position: relative;
-    flex-basis: calc((100% - 56px) /3);
+    /* flex-basis: calc((100% - 56px) /3); */
+    max-width: 335px;
+}
+
+.reviews-item:not(:first-child) {
+   display: none;
 }
 
 .review {
@@ -1010,11 +1048,17 @@ body {
     
 }
 
+/* hero */
+
+.hero-section {
+    margin-bottom: 50px;
+}
+
 /* advantages */
 
 .section-advantages {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 50px 32px;
+    margin-bottom: 100px;
 }
 
 .advantages-list {
@@ -1026,17 +1070,17 @@ body {
 }
 
   .sensations-title {
-      margin-bottom: 28px;
       font-size: 24px;
       max-width: 411px;
   }
 
-  .text-sensations {
-      max-width: 486px;
-  }
-
 
 /* ingridient */
+
+.section {
+    margin-bottom: 100px;
+}
+
 .sensations-list {
     gap: 32px;
 }
@@ -1045,6 +1089,15 @@ body {
     flex-basis: ((100% - 32px) / 2);
 }
 
+.sensations-title {
+     font-size: 24px;
+     max-width: 411px;
+ }
+
+   .text-sensations {
+      max-width: 486px; 
+   }
+
 /* products */
 
 .product-item:nth-child(-n+2) {
@@ -1052,6 +1105,39 @@ body {
     padding: 32px 20px;
     flex-basis: calc((100% - 18px) /2);
 } 
+
+/* review */
+
+.title-review {
+    margin-bottom: 90px;
+}
+
+.reviews-list {
+    gap: 16px;
+}
+
+.reviews-item {
+    position: relative;
+    /* flex-basis: calc((100% - 56px) /3); */
+}
+
+.reviews-item:nth-child(-n+2) {
+    display: flex;
+    flex-basis: ((100% - 16px) / 2);
+}
+
+/* sellers */
+
+.sellers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.sellers-item {
+    flex-basis: calc((100% - 16px) / 2);
+}
 
 }
 
@@ -1081,7 +1167,16 @@ body {
     stroke: var(--c-btn-primary);
 }
 
+.hero-section {
+    margin-bottom: 72px;
+}
+
 /* advantages */
+
+.section-advantages {
+    padding: 50px;
+    margin-bottom: 128px;
+}
 
 .advantages-list {   
     gap: 72px;
@@ -1093,6 +1188,9 @@ body {
  }
 
 /* ingridient */
+.section {
+    margin-bottom: 128px;
+}
 
 .ingridient-img {
     max-width: 206px;
@@ -1106,7 +1204,12 @@ body {
 .sensations-item {
     flex-basis: ((100% - 60px) /4);
 }
-  
+
+ .sensations-title {
+     font-size: 24px;
+     max-width: 411px;
+ }
+
 /* products  */
  
 .product-item:nth-child(n+1) {
@@ -1114,5 +1217,38 @@ body {
     padding: 32px 20px;
     flex-basis: calc((100% - 54px) /4);
 }
+
+/* review */
+
+.title-review {
+    margin-bottom: 90px;
+}
+
+.reviews-list {
+    gap: 28px;
+}
+
+.reviews-item {
+    position: relative;
+    flex-basis: calc((100% - 56px) /3);
+}
+
+.reviews-item:nth-child(n+3) {
+    display: flex;
+}
+
+/* sellers */
+
+/* .sellers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.sellers-item {
+    flex-basis: calc((100% - 32px) / 3);
+} */
+
    
 }
