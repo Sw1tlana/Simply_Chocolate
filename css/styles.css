@@ -582,7 +582,7 @@ body {
     display: none;
 }
 
-.product-one {
+.product-item:nth-child(1) {
     display: block;
     padding: 32px 52px;
     flex-basis: 100%;
@@ -682,19 +682,58 @@ body {
 }
 
 
-/* Section newchocolate */
+/* Section newchocolate  */
 
-/* .section-newchocolate {
-    padding: 72px 366px;
-    background-image: url(../images/newchocolate/whiskinchocolate_desk.jpg);
+ .section-newchocolate {
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 62px 0;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),
+    url(../images/newchocolate/whiskinchocolate_mob.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
+@media screen and (min-resolution: 192dpi){
+    .section-newchocolate {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),
+        url(../images/newchocolate/whiskinchocolate_mob.jpg);
+    }
+}
+
 .title-newchocolate {
     color: var(--c-white);
-} */
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-transform: uppercase;
+    max-width: 290px;
+    color: var(--c-white);
+    margin-bottom: 24px;
+}
+
+.container-newchocolate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text-newchocolate {
+    max-width: 326px;
+    text-align: center;
+    line-height: 1.28;
+    color: var(--c-white);
+    margin-bottom: 24px;
+}
+
+.newchocolate-btn {
+    padding: 12px 28px;
+    margin: 0 auto;
+}
 
 /* ------Section reviews--------- */
 
@@ -1068,7 +1107,7 @@ body {
  }
  
 
- @media screen and (min-resolution: 192dpi) {
+ @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
      .herro-inner {
          background-image: url(../images/hero-bg_tab@2x.jpg);
  }
@@ -1120,7 +1159,19 @@ body {
 
 /* products */
 
-.product-item:nth-child(-n+2) {
+.product-list {
+    gap: 18px;
+}
+.product-item:not(:first-child) {
+  display: block;
+}
+
+.product-item:nth-child(3) {
+    display: none;
+}
+
+.product-item:nth-child(1),
+.product-item:nth-child(2) {
     display: flex;
     padding: 32px 20px;
     flex-basis: calc((100% - 18px) /2);
@@ -1178,16 +1229,43 @@ body {
    margin-left: auto;
 }
 
+/* section-newchocolate */
+
+.section-newchocolate {
+    max-width: 768px;
+    padding: 72px 152px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),
+        url(../images/newchocolate/whiskinchocolate_tab.jpg);
+}
+
+@media screen  and (min-resolution: 192dpi) {
+    .section-newchocolate {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),
+            url(../images/newchocolate/whiskinchocolate_tab@2x.jpg);
+    }
+}
+
+.title-newchocolate {
+    max-width: 378px;
+}
+
+.text-newchocolate {
+    max-width: 467px;
+}
+
 }
 
 
-/* Desctop screen */
+/* ================  Desctop screen  ============== */
+/*=============================================*/
+
 @media screen and (min-width: 1200px){
 .container {
      max-width: 1200px;
  }
 
- /* Header */
+ /* ================ header ======================= */
+
 .nav-header-list,
 .header-socials {
     display: flex;
@@ -1206,7 +1284,7 @@ body {
     stroke: var(--c-btn-primary);
 }
 
-/* hero */
+/* ========================== hero ====================== */
 
   .herro-inner {
       max-width: 1200px;
@@ -1214,7 +1292,7 @@ body {
       background-image: url(../images/hero-bg_desk.jpg);
   }
 
-  @media screen and (min-resolution: 192dpi) {
+  @media screen and (min-width: 1200px) and (min-resolution: 192dpi) {
       .herro-inner {
           background-image: url(../images/hero-bg_desk@2x.jpg);
       }
@@ -1224,7 +1302,7 @@ body {
     margin-bottom: 72px;
 }
 
-/* advantages */
+/* ================= advantages ========================= */
 
 .section-advantages {
     padding: 50px;
@@ -1240,7 +1318,7 @@ body {
     display: block;
  }
 
-/* ingridient */
+/* =================== ingridient ====================== */
 .section {
     margin-bottom: 128px;
 }
@@ -1263,15 +1341,18 @@ body {
      max-width: 411px;
  }
 
-/* products  */
+/* ==================== products =================  */
+
+.product-item:nth-child(3) {
+    display: block;
+}
  
-.product-item:nth-child(n+1) {
-    display: flex;
+.product-item:nth-child(n+1){
     padding: 32px 20px;
     flex-basis: calc((100% - 54px) /4);
 }
 
-/* review */
+/* ==================== review ================== */
 
 .title-review {
     margin-bottom: 90px;
@@ -1290,7 +1371,7 @@ body {
     display: flex;
 }
 
-/* sellers  */
+/* ============ sellers ========================  */
 
  .sellers-list {
     gap: 16px;
@@ -1308,5 +1389,22 @@ body {
     max-width: 368px;
 }
 
-   
+/* ========== section newchocolate ===============  */
+
+.section-newchocolate {
+    max-width: 1200px;
+    padding: 72px 366px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),
+        url(../images/newchocolate/whiskinchocolate_desk.jpg);
 }
+
+@media screen and (min-width: 1200px) and (min-resolution: 192dpi){
+    .section-newchocolate {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%),
+            url(../images/newchocolate/whiskinchocolate_desk@2x.jpg);
+    }
+}
+}
+
+   
+
