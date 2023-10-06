@@ -119,9 +119,8 @@ body {
     gap: 24px;
 }
 
-.header-socials {
+.socials {
     display: flex;
-    align-items: center;
     gap: 18px;
 }
 
@@ -184,13 +183,13 @@ body {
 }
 
 
-.header-link-social {
+.link-social {
     fill:none;
     stroke: var(--c-primary);
     transition: 0.5s ease-in-out;
 }
 
-.header-link-social:hover {
+.link-social:hover {
     stroke: var(--c-btn-primary);
 }
 
@@ -328,9 +327,11 @@ body {
      overflow: hidden;
  }
  .section-advantages {
+    max-width: 375px;
     background-color: var(--c-bgc-dark);
     padding-top: 20px;
     padding-bottom: 20px;
+    margin: 0 auto;
  }
 
  .advantages-list {
@@ -586,7 +587,7 @@ body {
     display: block;
     padding: 32px 52px;
     flex-basis: 100%;
-}
+} 
 
 
 .product {
@@ -802,7 +803,77 @@ body {
     margin: 0 auto;
 }
 
-/* Modal */
+/* ------------ footer --------------- */
+
+.section-footer {
+   max-width: 375px;
+   height: auto;
+   width: 100%;
+   padding: 32px 0;
+   background-color: var(--c-bgc-dark);
+   margin: 0 auto;
+}
+
+.container-contacts-social {
+    display: flex;
+    margin-bottom: 64px;
+}
+
+.footer-contacts-link {
+    color: var(--c-white);
+    line-height: 1.28;
+}
+
+.link-social-footer {
+    fill: none;
+    stroke: var(--c-white);
+}
+
+.text-footer {
+    max-width: 300px;
+    color: var(--c-white);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.16;
+    margin-bottom: 32px;
+}
+
+.footer-contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+/* .footer-contacts-item {} */
+
+.footer-list-menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text-contacts {
+    margin-bottom: 14px;
+    font-weight: 500px;
+    color: var(--c-white);
+    line-height: 1.28;
+}
+
+.footer-list-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* .footer-item-menu {} */
+
+.footer-link-menu {
+    color: var(--c-white);
+    line-height: 1.28;
+}
+
+
+
+/* ========================      Modal          =================== */
 
 .backdrop {
     position: fixed;
@@ -863,6 +934,7 @@ body {
 }
  
 /* Person */
+
 .modal-form-text {
     color: var(--c-black);
     font-size: 14px;
@@ -1116,6 +1188,7 @@ body {
 /* advantages */
 
 .section-advantages {
+    max-width: 768px;
     padding-top: 50px 32px;
     margin-bottom: 100px;
 }
@@ -1160,19 +1233,18 @@ body {
 /* products */
 
 .product-list {
+    flex-wrap: nowrap;
     gap: 18px;
 }
 .product-item:not(:first-child) {
   display: block;
 }
 
-.product-item:nth-child(3) {
+.product-item:nth-child(-n+2) {
     display: none;
 }
 
-.product-item:nth-child(1),
-.product-item:nth-child(2) {
-    display: flex;
+.product-item:nth-child(-n+2) {
     padding: 32px 20px;
     flex-basis: calc((100% - 18px) /2);
 } 
@@ -1305,6 +1377,7 @@ body {
 /* ================= advantages ========================= */
 
 .section-advantages {
+    max-width: 1200px;
     padding: 50px;
     margin-bottom: 128px;
 }
@@ -1343,7 +1416,7 @@ body {
 
 /* ==================== products =================  */
 
-.product-item:nth-child(3) {
+.product-item:nth-child(-n+2) {
     display: block;
 }
  
