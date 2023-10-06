@@ -205,7 +205,6 @@ body {
     max-width: 375px;
     border-radius: 30px;
     background-color: var(--c-primary);
-    /* padding: 380px 40px 40px; */
     padding: 395px 20px 27px;
     background-image: url(../images/hero-bg_mob.jpg);
     background-repeat: no-repeat;
@@ -216,7 +215,6 @@ body {
 
 .hero-title {
     color: var(--c-white);
-    /* font-size: 28px; */
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -392,7 +390,7 @@ body {
  /* ----------Section ingridient----------- */
 
 
- /* ingridient */
+ /* ============ ingridient ============== */
 
  .container-sensations {
     display: flex;
@@ -451,7 +449,7 @@ body {
     color: var(--c-white);
 }
 
-/* ingridient overley */
+/* ================ ingridient overley =============== */
 
 .section-ingridient {
     margin-bottom: 72px;
@@ -570,7 +568,7 @@ body {
   }
 
 
- /* -----------Section Our products------------ */
+ /* ============ Section Our products ================== */
 
 .product-list {
     display: flex;
@@ -644,7 +642,7 @@ body {
     margin-top: 26px;
 }
 
-/* ---------Section sellers-------- */
+/* =================== Section sellers =================== */
 
 .sellers-list {
     display: flex;
@@ -683,7 +681,7 @@ body {
 }
 
 
-/* Section newchocolate  */
+/* ====================== Section newchocolate ================= */
 
  .section-newchocolate {
     max-width: 375px;
@@ -736,7 +734,7 @@ body {
     margin: 0 auto;
 }
 
-/* ------Section reviews--------- */
+/* =================== Section reviews ===================*/
 
 .title-review {
     margin-bottom: 70px;
@@ -803,15 +801,19 @@ body {
     margin: 0 auto;
 }
 
-/* ------------ footer --------------- */
+/* =================== footer ====================*/
 
 .section-footer {
    max-width: 375px;
-   height: auto;
-   width: 100%;
+   width: 100%; 
    padding: 32px 0;
    background-color: var(--c-bgc-dark);
    margin: 0 auto;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
 }
 
 .container-contacts-social {
@@ -822,6 +824,15 @@ body {
 .footer-contacts-link {
     color: var(--c-white);
     line-height: 1.28;
+    font-style: normal;
+}
+
+.text-contacts {
+    margin-bottom: 14px;
+    font-weight: 500px;
+    color: var(--c-white);
+    line-height: 1.28;
+    font-style: normal;
 }
 
 .link-social-footer {
@@ -849,13 +860,6 @@ body {
 .footer-list-menu {
     display: flex;
     flex-wrap: wrap;
-}
-
-.text-contacts {
-    margin-bottom: 14px;
-    font-weight: 500px;
-    color: var(--c-white);
-    line-height: 1.28;
 }
 
 .footer-list-menu {
@@ -1055,7 +1059,7 @@ body {
     fill: var(--c-white);
 }
 
-/* --------Mobal menu----------- */
+/* ======================= Mobal menu  ======================== */
 
 .mobal-menu {
     position: fixed;
@@ -1111,7 +1115,10 @@ body {
     stroke: var(--c-white);
 }
 
+
 /*============== Media================= */
+/*=====================================*/
+
 
 @media screen and (max-width: 767.98px) {
     .nav-header-list,
@@ -1325,6 +1332,65 @@ body {
     max-width: 467px;
 }
 
+/*  footer  */
+
+.section-footer {
+    max-width: 768px;
+    padding: 50px 0;
+} 
+
+.container-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-footer {
+    margin-right: auto;
+    margin-bottom: 54px;
+}
+
+.container-contacts-social {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 0;
+}
+
+.footer-contacts-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contacts-link {
+    line-height: 1.21;
+}
+
+.footer-list-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;  
+}
+
+.footer-item-menu {
+    position: relative;
+}
+
+.footer-item-menu::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 704px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.10);
+    transform: translateY(0);
+    content: '';
+}
+
+.footer-link-menu {
+ padding-top: 24px;
+}
+
+
+
 }
 
 
@@ -1477,6 +1543,17 @@ body {
             url(../images/newchocolate/whiskinchocolate_desk@2x.jpg);
     }
 }
+
+/* footer */
+
+.section-footer {
+    max-width: 1200px;
+}
+
+.text-footer {
+    margin-right: auto;
+}
+
 }
 
    
