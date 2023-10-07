@@ -85,17 +85,16 @@ body {
  }
 
   .section-title {
-    font-size: 24px;
     font-weight: 600;
     line-height: 1.16;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    text-align: center;
     margin-bottom: 50px;
+    text-align: center;
   }
 
 .container {
-    max-width: 375px;
+    max-width: 411px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
@@ -383,42 +382,32 @@ body {
 
  .text-advantages {
     color: var(--c-alfalLight);
-        line-height: normal;
-        letter-spacing: 0.02;
+    line-height: normal;
+    letter-spacing: 0.02;
  }
-
- /* ----------Section ingridient----------- */
-
 
  /* ============ ingridient ============== */
 
- .container-sensations {
+.container-sensations {
     display: flex;
     flex-direction: column;
     align-items: center;
  }
 
-  .sensations-title {
-      margin-bottom: 28px;
-      font-weight: 20px;
-      max-width: 283px;
-  }
+.text-sensations {
+    line-height: 1.28;
+    letter-spacing: 0.01;
+    margin-bottom: 50px;
+    max-width: 335px;
+    text-align: center;
+}
 
-  .text-sensations {
-      line-height: 1.28;
-      letter-spacing: 0.01;
-      margin-bottom: 50px;
-      /* max-width: 486px; */
-      max-width: 335px;
-      text-align: center;
-  }
-
-  .sensations-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+.sensations-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 
 .ingridient-img {
@@ -735,10 +724,6 @@ body {
 }
 
 /* =================== Section reviews ===================*/
-
-.title-review {
-    margin-bottom: 70px;
-}
 
 .reviews-list {
     display: flex;
@@ -1133,6 +1118,11 @@ body {
     max-width: 768px;
 }
 
+.section-title {
+    font-size: 24px;
+    max-width: 411px;
+}
+
 /* Header */
 .nav-header-list,
 .header-socials {
@@ -1208,11 +1198,6 @@ body {
     flex-basis: calc((100% - 60px) / 2);
 }
 
-  .sensations-title {
-      font-size: 24px;
-      max-width: 411px;
-  }
-
 
 /* ingridient */
 
@@ -1228,14 +1213,9 @@ body {
     flex-basis: ((100% - 32px) / 2);
 }
 
-.sensations-title {
-     font-size: 24px;
-     max-width: 411px;
- }
-
-   .text-sensations {
-      max-width: 486px; 
-   }
+.text-sensations {
+    max-width: 486px; 
+}
 
 /* products */
 
@@ -1376,7 +1356,7 @@ body {
 
 .footer-item-menu::before {
     position: absolute;
-    top: 50%;
+    top: -150%;
     left: 0;
     width: 704px;
     height: 1px;
