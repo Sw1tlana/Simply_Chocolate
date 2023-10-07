@@ -68,6 +68,7 @@ button {
 --c-black: #000000;
 --c-red: #f21f2e;
 --c-bg-ocean: #404BBF;
+--c-play: #F5F4F4;
 }
 
 body {
@@ -93,19 +94,26 @@ body {
     text-align: center;
   }
 
+  .title-section {
+    max-width: 384px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600px;
+}
+
 .container {
-    max-width: 411px;
+    max-width: 375px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .section {
-    margin-bottom: 72px;
+    margin-bottom: 100px;
 }
 
-/* ------------------------Header--------------- */
+/*=================== Header ======================== */
 
 .header {
     padding-bottom: 8px;
@@ -193,9 +201,10 @@ body {
 }
 
 
-/*--------------------Main-------------- */
+/*==================== Main ======================== */
 
-   /* Section hero */
+   /*======== Section hero ================= */
+
     .hero-section {
     margin-bottom: 70px;
 }
@@ -262,7 +271,7 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-right: auto;
+    margin-left: auto;
     color: var(--c-white);
     font-weight: 500;
     line-height: 1.28;
@@ -330,6 +339,9 @@ body {
     padding-bottom: 20px;
     margin: 0 auto;
  }
+ .section {
+    margin-bottom: 72px;
+}
 
  .advantages-list {
     display: flex;
@@ -372,6 +384,7 @@ body {
     border-radius: 50%;
     border: 1px solid var(--c-icons-light);
  }
+
  .subtitle-advantages {
     color: var(--c-white);
     font-size: 18px;
@@ -438,7 +451,7 @@ body {
     color: var(--c-white);
 }
 
-/* ================ ingridient overley =============== */
+/* = ingridient overley = */
 
 .section-ingridient {
     margin-bottom: 72px;
@@ -475,7 +488,7 @@ body {
 .container-overley-btn {
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 6px;
     margin-bottom: 14px;
 }
 
@@ -487,10 +500,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     font-family: Montserrat;
     font-size: 10px;
     line-height: 1.2;
     padding: 6px 16px;
+    
 }
 
 .sensations-overley-link {
@@ -500,6 +515,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     padding: 6px 16px;
     color: var(--c-primary);
     font-size: 10px;
@@ -513,31 +529,64 @@ body {
 }
 
 
-/*----------Section How it's made ---------------Recipe---------- */
+/* ======================= Section How it's made Video ====================== */
+
+.section-video {
+    margin: 0 auto;
+}
 
  .video-inner {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 40px;
  }
 
  .video-content {
-    padding: 32px;
-    flex-basis: calc((100 - 20px /2));
+    padding: 20px 0;
  }
 
  .video-media {
+    min-height: 500px;
+    height: 100%;
+    max-width: 335px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 15px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%,
+     rgba(0, 0, 0, 0.40) 100%), url(../images/video-bg/videochocolate_mob.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
  }
 
- .images-background {
-    border-radius: 15px;
-    height: 100%;
-    object-fit: cover;
+ @media screen and (min-width: 375px) and (min-resolution: 192dpi) {
+    .video-media {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%,
+        rgba(0, 0, 0, 0.40) 100%), url(../images/video-bg/videochocolate_mob@2x.jpg);
+    }
  }
+
+.icon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 34px;
+    max-height: 34px;
+    border: 1px solid var(--c-play);
+    border-radius: 50%;
+    stroke: var(--c-play);
+    transform: translate(-50% -50%);
+}
+
 
  /* .icons-recipe {} */
  
- .subtittle-recipe {
+ .subtitle-recipe {
     font-size: 18px;
     font-weight: 600;
     line-height: 1.33;
@@ -545,16 +594,31 @@ body {
     max-width: 350px;
  }
 
+ .subtext-recipe-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+ }
+
+ .subtext-recipe-item {
+    position: relative;
+    padding-right: 8px;
+ }
+
+ .icon-recipe {
+    position: absolute;
+    top: 0;
+    left: -14px;
+    fill: #4C4C4C;
+    stroke-width: 1px;
+    stroke: #ECEDED;
+ }
+
 
  .subtext-recipe {
     line-height: 1.28px;
     letter-spacing: 0.02;
  }
-
-  .subtext-recipe-item:not(:last-child), 
-   .subtext-recipe-item:not(:first-child){
-     margin-bottom: 24px;
-  }
 
 
  /* ============ Section Our products ================== */
@@ -1052,7 +1116,9 @@ body {
     flex-direction: column;
     top: 0;
     left: 0;
+    max-width: 220px;
     width: 100%;
+    max-height: 812px;
     height: 100%;
     padding: 136px 46px 20px;
     background-color: var(--c-bgc-dark);
@@ -1075,7 +1141,7 @@ body {
 }
 
 .mobal-close-icon {
-    fill: transparent;
+    fill: var(--c-bgc-dark);
     stroke: var(--c-white);
 }
 
@@ -1096,7 +1162,9 @@ body {
     gap: 18px;    
 }
 
-.header-link-social {
+.mobal-link-social {
+    max-width: 24px;
+    max-height: 24px;
     stroke: var(--c-white);
 }
 
@@ -1107,23 +1175,30 @@ body {
 
 @media screen and (max-width: 767.98px) {
     .nav-header-list,
-    .header-socials {
+    .socials {
         display: none;
     }
 }
 
-/* Tablet screen */
+/* ---------------- Tablet screen ----------------- */
+
 @media screen and (min-width: 768px) {
     .container {
     max-width: 768px;
 }
 
-.section-title {
-    font-size: 24px;
-    max-width: 411px;
+.section {
+    margin-bottom: 100px;
 }
 
-/* Header */
+.title-section {
+    max-width: 410px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/*-------------------  Header --------------------- */
+
 .nav-header-list,
 .header-socials {
     display: none;
@@ -1146,7 +1221,7 @@ body {
     
 }
 
-/* hero */
+/* ---------------------- hero ----------------*/
 
 .hero-section {
     margin-bottom: 50px;
@@ -1182,7 +1257,7 @@ body {
  }
 }
 
-/* advantages */
+/* ------------------- advantages ----------------------- */
 
 .section-advantages {
     max-width: 768px;
@@ -1199,7 +1274,7 @@ body {
 }
 
 
-/* ingridient */
+/* ---------------------------- ingridient --------------------*/
 
 .section {
     margin-bottom: 100px;
@@ -1217,7 +1292,31 @@ body {
     max-width: 486px; 
 }
 
-/* products */
+/* ------------------------ video ---------------------- */
+
+.video-inner {
+    gap: 20px;
+}
+
+.video-content {
+  padding: 32px;
+}
+
+.video-media {
+    min-height: 400px;
+    max-width: 614px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%,
+   rgba(0, 0, 0, 0.40) 100%), url(../images/video-bg/videochocolate_tab.jpg);
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .video-media {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%,
+        rgba(0, 0, 0, 0.40) 100%), url(../images/video-bg/videochocolate_tab@2x.jpg);
+    }
+}
+
+/* ------------------------- products -------------------- */
 
 .product-list {
     flex-wrap: nowrap;
@@ -1236,7 +1335,7 @@ body {
     flex-basis: calc((100% - 18px) /2);
 } 
 
-/* review */
+/* -------------------------------- review --------------------- */
 
 .title-review {
     margin-bottom: 90px;
@@ -1256,11 +1355,16 @@ body {
     flex-basis: ((100% - 16px) / 2);
 }
 
-/* sellers */
+/* ---------------------- sellers ---------------- */
 
 .sellers-list {
     display: flex;
     gap: 16px;
+}
+
+.sellers-img {
+    max-width: 344px;
+    max-height: 364px;
 }
 
 .sellers-item:nth-child(3) {
@@ -1288,7 +1392,7 @@ body {
    margin-left: auto;
 }
 
-/* section-newchocolate */
+/* -------------------- section-newchocolate ----------------------- */
 
 .section-newchocolate {
     max-width: 768px;
@@ -1312,7 +1416,7 @@ body {
     max-width: 467px;
 }
 
-/*  footer  */
+/* --------------------- footer ---------------------- */
 
 .section-footer {
     max-width: 768px;
@@ -1369,6 +1473,13 @@ body {
  padding-top: 24px;
 }
 
+/* ---------- Mobal menu ---------------- */
+
+.mobal-menu {
+    max-width: 290px;
+    max-height: 1024px;
+}
+
 
 
 }
@@ -1382,7 +1493,7 @@ body {
      max-width: 1200px;
  }
 
- /* ================ header ======================= */
+ /* ----------------------- header ------------------- */
 
 .nav-header-list,
 .header-socials {
@@ -1402,7 +1513,7 @@ body {
     stroke: var(--c-btn-primary);
 }
 
-/* ========================== hero ====================== */
+/* ------------------------- hero ---------------------*/
 
   .herro-inner {
       max-width: 1200px;
@@ -1420,7 +1531,7 @@ body {
     margin-bottom: 72px;
 }
 
-/* ================= advantages ========================= */
+/*---------------------------- advantages --------------------------*/
 
 .section-advantages {
     max-width: 1200px;
@@ -1437,7 +1548,7 @@ body {
     display: block;
  }
 
-/* =================== ingridient ====================== */
+/* ---------------------------- ingridient ------------------------- */
 .section {
     margin-bottom: 128px;
 }
@@ -1460,7 +1571,29 @@ body {
      max-width: 411px;
  }
 
-/* ==================== products =================  */
+ /* --------------------------- video ------------------------ */
+
+ .video-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+ }
+
+ .video-media {
+     min-height: 400px;
+     max-width: 600px;
+     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%,
+       rgba(0, 0, 0, 0.40) 100%), url(../images/video-bg/videochocolate_desc.jpg);
+ }
+
+ @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+     .video-media {
+         background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%,
+            rgba(0, 0, 0, 0.40) 100%), url(../images/video-bg/videochocolate_desc@2x.jpg);
+     }
+ }
+
+/* -------------------------- products ---------------------  */
 
 .product-item:nth-child(-n+2) {
     display: block;
@@ -1471,7 +1604,7 @@ body {
     flex-basis: calc((100% - 54px) /4);
 }
 
-/* ==================== review ================== */
+/* -------------------- review -------------------- */
 
 .title-review {
     margin-bottom: 90px;
@@ -1490,11 +1623,17 @@ body {
     display: flex;
 }
 
-/* ============ sellers ========================  */
+/* ------------------------ sellers -----------------------  */
 
  .sellers-list {
     gap: 16px;
 }
+
+.sellers-img {
+    max-width: 368px;
+    max-height: 464px;
+}
+
 .sellers-item:nth-child(3),
 .sellers-item:nth-child(2) {
     display: flex;
@@ -1508,7 +1647,7 @@ body {
     max-width: 368px;
 }
 
-/* ========== section newchocolate ===============  */
+/* ------------------- section newchocolate --------------------- */
 
 .section-newchocolate {
     max-width: 1200px;
@@ -1524,7 +1663,7 @@ body {
     }
 }
 
-/* footer */
+/*  ----------------- footer --------------- */
 
 .section-footer {
     max-width: 1200px;
@@ -1532,6 +1671,11 @@ body {
 
 .text-footer {
     margin-right: auto;
+}
+
+.mobal-menu {
+    max-width: 290px;
+    max-height: 1024px;
 }
 
 }
