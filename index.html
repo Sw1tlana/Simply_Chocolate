@@ -626,25 +626,25 @@
             </li>
             <li class="sellers-item">
               <img
+                class="sellers-img"
                 srcset="
                   ./images/sellers/cucatechocolate.jpg    1x,
                   ./images/sellers/cucatechocolate@2x.jpg 2x
                 "
                 src="./images/sellers/cucatechocolate.jpg"
                 alt="cucate chocolate"
-                class="sellers-img"
                 width="368"
               />
             </li>
             <li class="sellers-item">
               <img
+                class="sellers-img"
                 srcset="
                   ./images/sellers/blackchocolate.jpg    1x,
                   ./images/sellers/blackchocolate@2x.jpg 2x
                 "
                 src="./images/sellers/blackchocolate.jpg"
                 alt="black chocolate"
-                class="sellers-img"
               />
             </li>
           </ul>
@@ -830,6 +830,54 @@
           </svg>
         </button>
         <h2 class="section-title"><span class="mini-color">Buy</span> now</h2>
+        <ul class="modal-products-list">
+          <li class="modal-products-item">
+            <div class="modal-container-img">
+              <img
+                class="modal-products-img"
+                srcset="
+                  ./images/modalbynow/whitechocolate.png    1x,
+                  ./images/modalbynow/whitechocolate@2x.png 2x
+                "
+                src="./images/modalbynow/whitechocolate.png"
+                alt="white chocolate"
+                width="120"
+              />
+              <span class="span-weight">100 g</span>
+            </div>
+          </li>
+          <li class="modal-products-item">
+            <div class="modal-container-img">
+              <img
+                class="modal-products-img"
+                srcset="
+                  ./images/modalbynow/kinderchocolate.png    1x,
+                  ./images/modalbynow/kinderchocolate@2x.png 2x
+                "
+                src="./images/modalbynow/kinderchocolate.png"
+                alt="kinder chocolate"
+                width="120"
+              />
+              <span class="span-weight">200 g</span>
+            </div>
+          </li>
+          <li class="modal-products-item">
+            <div class="modal-container-img">
+              <img
+                class="modal-products-img"
+                srcset="
+                  ./images/modalbynow/darkchocolate.png    1x,
+                  ./images/modalbynow/darkchocolate@2x.png 2x
+                "
+                src="./images/modalbynow/darkchocolate.png"
+                alt="darkchocolate"
+                width="120px"
+              />
+              <span class="span-weight">300 g</span>
+            </div>
+          </li>
+        </ul>
+
         <form
           class="contact-form"
           action="https://formsubmit.co/rex.141rex@gmail.com"
@@ -899,13 +947,18 @@
               <label class="modal-form-text" for="user-card-number"
                 >Card number</label
               >
-              <input
-                class="modal-person-input"
-                type="tel"
-                id="user-card-number"
-                name="user-card-number"
-                placeholder="Enter card"
-              />
+              <div class="modal-card">
+                <input
+                  class="modal-person-input"
+                  type="tel"
+                  id="user-card-number"
+                  name="user-card-number"
+                  placeholder="Enter card"
+                />
+                <svg class="modal-icon-card" width="44" height="30">
+                  <use href="./images/icons.svg#icon-Mastercard"></use>
+                </svg>
+              </div>
             </div>
           </fieldset>
 

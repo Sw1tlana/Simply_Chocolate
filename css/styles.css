@@ -950,15 +950,18 @@ body {
 }
 
 .modal {
-    position: relative;
-    max-width: 610px;
+    position: absolute;
+    /* max-width: 610px; */
+    max-width: 310px;
     width: 100%;
-    max-height: 1058px;
+    /* max-height: 1058px; */
+    max-height: 994px;
     height: 100%;
     overflow: auto;
     background-color: var(--c-bgc-light);
     border-radius: 15px;
-    padding: 48px;
+    /* padding: 48px; */
+    padding: 32px 24px;
     transform: scale(1);
     transition: transform 250ms ease-in-out;
     overflow: auto;
@@ -985,12 +988,63 @@ body {
 .backdrop.is-hidden .modal {
     transform: scale(0);
 }
+
+/* Modal products */
+
+.modal-products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.modal-products-item {
+    flex-basis: ((100% - 32px) / 2);
+}
+
+.modal-container-img {
+    /* padding: 24px 20px 18px; */
+    padding: 0 16px;
+    /* max-width: 160px; */
+    max-width: 264px;
+    width: 100%;
+    /* min-height: 196px; */
+    min-height: 84px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 14px;
+    border-radius: 15px;
+    border: 1px solid rgba(17, 17, 17, 0.10);
+    background-color: var(--c-white);
+}
+
+.modal-products-img {
+  /* max-width: 120px; */
+  max-width: 84px;
+  max-height: 70px;
+}
+
+.span-weight {
+    border-radius: 100px;
+    border: 1px solid rgba(17, 17, 17, 0.10);
+    background-color: var(--c-white);
+    font-weight: 600;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* padding: 8px 27px; */
+    padding: 6px 16px;
+}
  
 /* Person */
 
 .modal-form-text {
     color: var(--c-black);
-    font-size: 14px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 1.28;
@@ -1000,6 +1054,8 @@ body {
 
 .container-person {
     display: flex;
+    
+    flex-wrap: wrap;
     gap: 21px;
 }
 
@@ -1007,9 +1063,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Montserrat;
     width: 100%;
-    padding: 22px 24px;
+    /* padding: 22px 24px; */
+    padding: 14px 18px;
     outline: transparent;
     border-radius: 13px;
     border: 1.5px solid rgba(17, 17, 17, 0.05);
@@ -1024,7 +1080,8 @@ body {
 
 .modal-person-input::placeholder {
     color: rgba(64, 64, 64, 0.30);
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 14px;
 }
 
 .modal-person-input:focus {
@@ -1055,15 +1112,13 @@ body {
     top: 50%;
     left: 24px;
     transform: translateY(-50%); 
-    margin-right: 18px;   
+    margin-right: 18px; 
+    max-width: 24px; 
+    min-height: 18px;
 }
 
 .person-input {
    padding-left: 170px;
-}
-
-.input-textarea {
-    min-width: 138px;
 }
 
 .phone-number {
@@ -1072,8 +1127,28 @@ body {
     left: 74px;
     transform: translateY(-50%);
     color: var(--c-black);
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: 500;
+}
+
+.modal-card {
+    position: relative;
+}
+
+.modal-icon-card {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    max-width: 24px;
+    max-height: 14px;
+}
+
+/* Textarea */
+
+.input-textarea {
+    min-height: 138px;
+    padding: 14px 18px;
 }
 
 /* Checkbox */
@@ -1362,11 +1437,6 @@ body {
     gap: 16px;
 }
 
-.sellers-img {
-    max-width: 344px;
-    max-height: 364px;
-}
-
 .sellers-item:nth-child(3) {
     display: flex;
 }
@@ -1388,6 +1458,11 @@ body {
 .sellers-img {
     max-width: 344px;
 }
+
+.sallers-text {
+  max-width: 306px;
+}
+
 .primery-button {
    margin-left: auto;
 }
@@ -1480,6 +1555,44 @@ body {
     max-height: 1024px;
 }
 
+/*----------------- Modal------------------- */
+
+.modal {
+    max-width: 610px;  
+    max-height: 1058px; 
+    padding: 48px; 
+}
+
+.modal-container-img {
+    padding: 24px 20px 18px; 
+    max-width: 160px;
+    min-height: 196px; 
+    display: flex;
+    flex-direction: column;   
+}
+
+.modal-products-img {
+    max-width: 120px; 
+    max-height: 108px;
+}
+
+.span-weight {
+   justify-content: center;
+   padding: 8px 27px; 
+}
+
+.modal-person-input {
+   padding: 22px 24px;
+   
+}
+
+.modal-person-input::placeholder {
+    font-size: 18px;
+}
+
+.phone-number {
+    font-size: 18px;
+}
 
 
 }
@@ -1647,6 +1760,10 @@ body {
     max-width: 368px;
 }
 
+.sallers-text {
+    max-width: 407px;
+}
+
 /* ------------------- section newchocolate --------------------- */
 
 .section-newchocolate {
@@ -1672,6 +1789,8 @@ body {
 .text-footer {
     margin-right: auto;
 }
+
+/* -----------------Mobal menu ----------------------*/
 
 .mobal-menu {
     max-width: 290px;
