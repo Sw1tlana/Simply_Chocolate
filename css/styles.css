@@ -993,13 +993,13 @@ body {
 
 .modal-products-list {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-direction: column;
+    gap: 24px;
     margin-bottom: 40px;
 }
 
 .modal-products-item {
-    flex-basis: ((100% - 32px) / 2);
+    flex-basis: 100%;
 }
 
 .modal-container-img {
@@ -1053,9 +1053,8 @@ body {
 }
 
 .container-person {
-    display: flex;
-    
-    flex-wrap: wrap;
+    display: flex; 
+    flex-direction: column;
     gap: 21px;
 }
 
@@ -1063,6 +1062,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-width: 264px;
     width: 100%;
     /* padding: 22px 24px; */
     padding: 14px 18px;
@@ -1097,7 +1097,7 @@ body {
 .modal-person-ukraine::after {
    position: absolute;
    top: 50%;
-   left: 132px;
+   left: 50px;
    transform: rotate(-90deg) translatex(50%);
    transform-origin: 100% 0;
    width: 32px;
@@ -1110,7 +1110,8 @@ body {
 .modal-person-icon {
     position: absolute;
     top: 50%;
-    left: 24px;
+    /* left: 24px; */
+    left: 18px;
     transform: translateY(-50%); 
     margin-right: 18px; 
     max-width: 24px; 
@@ -1118,17 +1119,18 @@ body {
 }
 
 .person-input {
-   padding-left: 170px;
+   padding-left: 90px;
 }
 
 .phone-number {
     position: absolute;
     top: 50%;
-    left: 74px;
+    /* left: 74px; */
+    left: 45px;
     transform: translateY(-50%);
     color: var(--c-black);
     /* font-size: 18px; */
-    font-weight: 500;
+    font-weight: 500px;
 }
 
 .modal-card {
@@ -1563,6 +1565,17 @@ body {
     padding: 48px; 
 }
 
+.modal-products-list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.modal-products-item {
+    flex-basis: ((100% - 32px) / 2);
+}
+
 .modal-container-img {
     padding: 24px 20px 18px; 
     max-width: 160px;
@@ -1581,9 +1594,24 @@ body {
    padding: 8px 27px; 
 }
 
+.container-person {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 .modal-person-input {
    padding: 22px 24px;
-   
+   max-width: 514px;
+}
+
+.person-input {
+    padding-left: 160px;
+}
+
+
+.modal-person-icon {
+    left: 24px; 
 }
 
 .modal-person-input::placeholder {
@@ -1591,9 +1619,13 @@ body {
 }
 
 .phone-number {
+    left: 74px; 
     font-size: 18px;
 }
 
+.modal-person-ukraine::after {
+    left: 100px;
+}
 
 }
 
